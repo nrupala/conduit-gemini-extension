@@ -1,0 +1,22 @@
+{
+  "name": "conduit",
+  "version": "1.0.0",
+  "description": "Conduit \u2014 Filings & Fundamentals: 24 read-only tools over U.S. SEC EDGAR filings, XBRL fundamentals, segments, peers, and insider filings, served by the hosted Conduit MCP server.",
+  "mcpServers": {
+    "conduit": {
+      "httpUrl": "https://mcp.pipavia.com/mcp",
+      "headers": {
+        "Authorization": "Bearer $CONDUIT_API_KEY"
+      }
+    }
+  },
+  "settings": [
+    {
+      "name": "Conduit API Key",
+      "description": "Your Conduit API key from pipavia.com (a free tier is available). The extension sends it as the Authorization header to the Conduit MCP server.",
+      "envVar": "CONDUIT_API_KEY",
+      "sensitive": true
+    }
+  ],
+  "contextFileName": "GEMINI.md"
+}
